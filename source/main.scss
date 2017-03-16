@@ -1,11 +1,60 @@
-#bigroom {
-	body {
-		background-image: url('/img/bg-bigroom.jpg');
-		background-size: cover;
-	}
+// Fonts
+$font-body: 'Roboto', sans-serif;
+$font-header: 'Roboto', sans-serif;
+$font-body-weight: 300;
+$font-header-weight: 400;
 
-	.main {
-		opacity: 0.8;
-		background-color: white;
+// Colours
+$bigroom-blue: #6AD1E3;
+$bigroom-grey: #53565A;
+
+body {
+	font-family: $font-body;
+	font-weight: $font-body-weight;
+	font-size: 1.1em;
+	background-color: white;
+	color: $bigroom-grey;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-header;
+	font-weight: $font-header-weight;
+	color: $bigroom-blue;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 970px;
+		margin: auto;
 	}
+}
+
+.banner {
+	background-color: $bigroom-blue;
+	color: white;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+.hero {
+	background-image: url('/img/forest-bg.jpg');
+	background-size: cover;
+}
+
+.hero-logo {
+	margin: 4rem auto;
+	display: block;
+}
+
+.main {
+	text-align: center;
+	padding: 2rem;
+}
+
+.footer {
+	background-color: $bigroom-blue;
+	color: white;
+	text-align: center;
+	padding: 1rem 0;
 }

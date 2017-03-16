@@ -99,7 +99,8 @@ if (options.watch) {
   .use(watch({
     paths: {
       '${source}/**/*': true,
-      'scss/**/*': 'main.scss',
+      'scss/**/*': ['main.scss', '**/*.html'],
+      '${source}/main.scss': '**/*.+(html|scss)',
       'layouts/**/*': '**/*.html'
     },
     livereload: 35728
