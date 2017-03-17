@@ -11,7 +11,7 @@ $bigroom-grey: #53565A;
 body {
 	font-family: $font-body;
 	font-weight: $font-body-weight;
-	font-size: 1.1em;
+	font-size: 1.1rem;
 	background-color: white;
 	color: $bigroom-grey;
 	margin: 0;
@@ -35,7 +35,9 @@ h1, h2, h3, h4, h5, h6 {
 	color: white;
 	text-align: center;
 	padding: 1rem 0;
-	box-shadow: 50px 50px 50px 20px black;
+	box-shadow: 0px 4px 20px 0px $bigroom-grey;
+	z-index: 100;
+	position: relative;
 
 	a {
 		color: white;
