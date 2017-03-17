@@ -15,12 +15,17 @@ body {
 	background-color: white;
 	color: $bigroom-grey;
 	margin: 0;
+
+	p {
+		line-height: 140%;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-header;
 	font-weight: $font-header-weight;
 	color: $bigroom-blue;
+	letter-spacing: 0.5px;
 }
 
 a {
@@ -42,10 +47,11 @@ a:hover {
 	background-color: $bigroom-blue;
 	color: white;
 	text-align: center;
-	padding: 1rem 0;
+	padding: 1rem 2rem;
 	box-shadow: 0px 4px 20px 0px $bigroom-grey;
 	z-index: 100;
 	position: relative;
+	letter-spacing: 1px;
 
 	a {
 		color: white;
@@ -72,14 +78,21 @@ a:hover {
 .main {
 	text-align: center;
 	padding: 2rem;
+	letter-spacing: 0.6px;
+
+	p {
+		margin: 1em 4em;
+	}
 }
 
 .button {
-	border: 1px solid $bigroom-blue;
+	border: 2px solid $bigroom-blue;
 	border-radius: 40px;
 	padding: 1rem 2rem;
 	display: inline-block;
 	color: $bigroom-blue;
+	font-weight: $font-header-weight;
+	margin-bottom: 1em;
 }
 
 .button:hover {
@@ -104,21 +117,21 @@ a:hover {
 	}
 
 	.logo-doteco {
-		width: 50%;
+		width: 40%;
 	}
 
 	.logo-bcorp {
-		width: 30%;
+		width: 25%;
 	}
 
 	.logo-climatesmart {
-		width: 75%;
+		width: 65%;
 	}
 
 	.col {
 		margin: auto;
-		margin-bottom: 2rem;
-		width: 50%;
+		margin-bottom: 0.5rem;
+		width: 30%;
 	}
 }
 
