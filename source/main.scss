@@ -35,16 +35,28 @@ h1, h2, h3, h4, h5, h6 {
 	color: white;
 	text-align: center;
 	padding: 1rem 0;
+	box-shadow: 50px 50px 50px 20px black;
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+
 }
 
 .hero {
-	background-image: url('/img/forest-bg.jpg');
+	background-image: url('/img/forests.jpg');
 	background-size: cover;
+	padding: 4rem;
 }
 
 .hero-logo {
-	margin: 4rem auto;
+	margin: auto;
 	display: block;
+	width: 200pt;
 }
 
 .main {
@@ -52,9 +64,41 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 2rem;
 }
 
+.button {
+	border: 1px solid $bigroom-blue;
+	border-radius: 40px;
+	padding: 1rem 2rem;
+	display: inline-block;
+	text-decoration: none;
+	color: $bigroom-blue;
+}
+
+.button:hover {
+	background-color: $bigroom-blue;
+	color: white;
+}
+
 .footer {
+	font-size: 1rem;
 	background-color: $bigroom-blue;
 	color: white;
 	text-align: center;
 	padding: 1rem 0;
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+
+	address {
+		font-style: normal;
+	}
+
+	.col {
+		width: 20%;
+		margin: 1rem;
+	}
 }

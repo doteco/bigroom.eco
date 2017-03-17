@@ -65,6 +65,18 @@
 {{ contents | safe }}
 {% endblock %}
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+	// email obfuscation
+	(function ($) {
+		$(".email-link").html(function () {
+			var email = $(this).data("name") + "@" + $(this).data("domain");
+			return "<a href=\"mailto:" + email +"\">" + email + "</a>";
+		});
+	})(jQuery);
+</script>
+
+
 {% if livereload %}
 <script src="http://localhost:35728/livereload.js"></script>
 {% endif %}
