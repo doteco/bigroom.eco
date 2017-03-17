@@ -23,6 +23,14 @@ h1, h2, h3, h4, h5, h6 {
 	color: $bigroom-blue;
 }
 
+a {
+	color: $bigroom-blue;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
 @media (min-width: 1200px) {
 	.container {
 		width: 970px;
@@ -71,13 +79,13 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 40px;
 	padding: 1rem 2rem;
 	display: inline-block;
-	text-decoration: none;
 	color: $bigroom-blue;
 }
 
 .button:hover {
 	background-color: $bigroom-blue;
 	color: white;
+	text-decoration: none;
 }
 
 .footer {
@@ -89,10 +97,6 @@ h1, h2, h3, h4, h5, h6 {
 
 	a {
 		color: white;
-		text-decoration: none;
-	}
-	a:hover {
-		text-decoration: underline;
 	}
 
 	address {
