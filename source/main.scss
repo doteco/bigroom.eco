@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $font-header;
 	font-weight: $font-header-weight;
 	color: $bigroom-blue;
+	letter-spacing: 0.5px;
 }
 
 a {
@@ -82,7 +83,7 @@ a:hover {
 
  .main {
 	text-align: center;
-	padding: 1rem;
+	padding: 2rem;
 	letter-spacing: 0.6px;
 
 	p {
