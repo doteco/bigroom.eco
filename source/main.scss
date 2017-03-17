@@ -99,8 +99,45 @@ h1, h2, h3, h4, h5, h6 {
 		font-style: normal;
 	}
 
+	.logo-doteco {
+		width: 50%;
+	}
+
+	.logo-bcorp {
+		width: 30%;
+	}
+
+	.logo-climatesmart {
+		width: 75%;
+	}
+
 	.col {
-		width: 20%;
-		margin: 1rem;
+		margin: auto;
+		margin-bottom: 2rem;
+		width: 50%;
 	}
 }
+
+.row {
+	clear: both;
+	zoom: 1; /* For IE 6/7 */
+}
+
+.row:before,
+.row:after {
+	content: "";
+	display: table;
+}
+
+.row:after {
+	clear:both;
+}
+
+@media (min-width: 768px) {
+	.footer .col {
+		width: 16%;
+		padding: 2%;
+		float: left
+	}
+}
+
