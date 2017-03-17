@@ -15,25 +15,28 @@ const nunjucks = require('nunjucks')
 let env = process.env.NODE_ENV || 'DEV'
 console.log('Building for environment:', env)
 
-const env_options = {
+const envOptions = {
   DEV: {
     'ga_tracking_id': 'UA-2825422-18',
     'site_url': 'http://localhost:8081',
-    'watch': true
+    'watch': true,
+    'disallow': '/'
   },
   TST: {
     'ga_tracking_id': 'UA-2825422-18',
     'site_url': 'https://test.bigroom.eco',
-    'watch': false
+    'watch': false,
+    'disallow': '/'
   },
   PRD: {
     'ga_tracking_id': 'UA-2825422-17',
     'site_url': 'https://bigroom.eco',
-    'watch': false
+    'watch': false,
+    'disallow': ['mobile/*', 'm/*']
   }
 }
 
-let options = env_options[env]
+let options = envOptions[env]
 console.log('Using options:', options)
 
 nunjucks.configure('layouts', {watch: false, noCache: true})
@@ -83,8 +86,8 @@ let ms = Metalsmith(__dirname)
     omitIndex: true
   }))
   .use(robots({
-    disallow: ['mobile/*', 'm/*'],
-    sitemap: options['site_url'] + 'sitemap.xml'
+    disallow: options['disallow'],
+    sitemap: options['site_url'] + '/sitemap.xml'
   }))
 
 if (options.watch) {
