@@ -17,17 +17,17 @@ console.log('Building for environment:', env)
 
 const env_options = {
   DEV: {
-    'ga_tracking_id': 'UA-2825422-15',
+    'ga_tracking_id': 'UA-2825422-18',
     'site_url': 'http://localhost:8081',
     'watch': true
   },
   TST: {
-    'ga_tracking_id': 'UA-2825422-15',
+    'ga_tracking_id': 'UA-2825422-18',
     'site_url': 'https://test.bigroom.eco',
     'watch': false
   },
   PRD: {
-    'ga_tracking_id': 'UA-2825422-6',
+    'ga_tracking_id': 'UA-2825422-17',
     'site_url': 'https://bigroom.eco',
     'watch': false
   }
@@ -99,7 +99,7 @@ if (options.watch) {
   .use(watch({
     paths: {
       '${source}/**/*': true,
-      'scss/**/*': ['main.scss', '**/*.html'],
+      'scss/**/*': '**/*.+(html|scss)',
       '${source}/main.scss': '**/*.+(html|scss)',
       'layouts/**/*': '**/*.html'
     },
