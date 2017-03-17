@@ -25,7 +25,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $font-header;
 	font-weight: $font-header-weight;
 	color: $bigroom-blue;
-	letter-spacing: 0.5px;
 }
 
 a {
@@ -61,6 +60,12 @@ a:hover {
 		text-decoration: underline;
 	}
 
+	.arrow-icon {
+		width: 2rem;
+		padding-left: 2em;
+		margin-bottom: -0.5em;
+	}
+
 }
 
 .hero {
@@ -75,9 +80,9 @@ a:hover {
 	width: 200pt;
 }
 
-.main {
+ .main {
 	text-align: center;
-	padding: 2rem;
+	padding: 1rem;
 	letter-spacing: 0.6px;
 
 	p {
