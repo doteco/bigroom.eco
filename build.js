@@ -7,10 +7,8 @@ const markdown = require('metalsmith-markdownit')
 const sass = require('metalsmith-sass')
 const serve = require('metalsmith-serve')
 const sitemap = require('metalsmith-sitemap')
-const redirect = require('metalsmith-redirect')
 const robots = require('metalsmith-robots')
 const watch = require('metalsmith-watch')
-const nunjucks = require('nunjucks')
 
 let env = process.env.NODE_ENV || 'DEV'
 console.log('Building for environment:', env)
@@ -39,8 +37,6 @@ const envOptions = {
 let options = envOptions[env]
 console.log('Using options:', options)
 
-nunjucks.configure('layouts', {watch: false, noCache: true})
-
 let ms = Metalsmith(__dirname)
   .metadata({
     'year': new Date().getFullYear(),
@@ -65,6 +61,9 @@ let ms = Metalsmith(__dirname)
   }))
   .use(inplace({
     engine: 'nunjucks',
+    engineOptions: {
+      'cache': false
+    },
     pattern: '**/*.html'
   }))
   .use(layouts({
@@ -78,8 +77,6 @@ let ms = Metalsmith(__dirname)
     },
     pngquant: { },
     svgo: { }
-  }))
-  .use(redirect({
   }))
   .use(sitemap({
     hostname: options['site_url'],
