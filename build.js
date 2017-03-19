@@ -15,7 +15,6 @@ console.log('Building for environment:', env)
 
 const envOptions = {
   DEV: {
-    'ga_tracking_id': 'UA-2825422-18',
     'site_url': 'http://localhost:8081',
     'watch': true,
     'disallow': '/'
