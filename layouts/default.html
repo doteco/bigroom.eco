@@ -112,7 +112,8 @@
 	(function ($) {
 		$(".email-link").html(function () {
 			var email = $(this).data("name") + "@" + $(this).data("domain");
-			return "<a href=\"mailto:" + email +"\">" + email + "</a>";
+			var text = $(this).text() || email;
+			return "<a href=\"mailto:" + email +"\">" + text + "</a>";
 		});
 	})(jQuery);
 </script>
