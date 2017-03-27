@@ -9,6 +9,7 @@ const serve = require('metalsmith-serve')
 const sitemap = require('metalsmith-sitemap')
 const robots = require('metalsmith-robots')
 const watch = require('metalsmith-watch')
+const permalinks = require('metalsmith-permalinks')
 
 let env = process.env.NODE_ENV || 'DEV'
 console.log('Building for environment:', env)
@@ -58,16 +59,17 @@ let ms = Metalsmith(__dirname)
   .use(markdown({
     html: true
   }))
+  .use(layouts({
+    engine: 'nunjucks',
+    default: 'default.html',
+    partials: 'layouts/partials',
+    pattern: '**/*.html'
+  }))
   .use(inplace({
     engine: 'nunjucks',
     engineOptions: {
       'cache': false
     },
-    pattern: '**/*.html'
-  }))
-  .use(layouts({
-    engine: 'nunjucks',
-    default: 'default.html',
     pattern: '**/*.html'
   }))
   .use(imagemin({
@@ -76,6 +78,9 @@ let ms = Metalsmith(__dirname)
     },
     pngquant: { },
     svgo: { }
+  }))
+  .use(permalinks({
+    relative: false
   }))
   .use(sitemap({
     hostname: options['site_url'],

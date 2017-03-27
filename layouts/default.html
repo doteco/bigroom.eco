@@ -61,14 +61,52 @@
 	</script>
 </head>
 <body>
+
+{% block banner %}
+{{ banner | safe }}
+{% endblock %}
+
+<div class="hero">
+	<a href="/"><img class="hero-logo container" src="/img/BR_colour_inverse.png" alt="Big Room corporate logo" /></a>
+</div>
+
 {% block content %}
 {{ contents | safe }}
 {% endblock %}
 
+<footer class="footer">
+  	<div class="container">
+  		<div class="row">
+  		<div class="col">
+			&copy; {{ year }} Big Room Inc.<br/>
+			<span class="email-link" data-name="hello" data-domain="bigroom.eco"></span><br />
+			<a href="/privacy/">Privacy policy</a><br />
+		</div>
+		<div class="col">
+			<address>
+			332-237 Keefer Street<br />
+			Vancouver, BC, Canada<br />
+			V6A 1X6<br />
+			</address>
+		</div>
+		<div class="col">
+			<a href="https://home.eco"><img src="/img/doteco-logo-white.svg" class="logo-doteco" alt=".eco logo" /></a>
+		</div>
+		<div class="col">
+			<a href="https://climatesmartbusiness.com/"><img src="/img/climate-smart-logo.png" class="logo-climatesmart" alt="Climate Smart logo" /></a>
+		</div>
+		<div class="col">
+			<a href="https://www.bcorporation.net/community/big-room-inc"><img class="logo-bcorp" src="/img/bcorp.png" alt="B Corporation logo" /></a>
+		</div>
+		</div>
+	</div>
+</footer>
+
 <script
-  src="https://code.jquery.com/jquery-3.2.0.min.js"
-  integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   crossorigin="anonymous"></script>
+
 <script>
 	// email obfuscation
 	(function ($) {
