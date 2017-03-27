@@ -1,37 +1,18 @@
 ---
 title: 404 Not Found
+permalink: false
+description: Unable to find the page you're looking for
+page_path: /404.html
+og_image: og-bigroom.png
 ---
+
+{% extends './layouts/default.html' %}
+
+{% block content %}
 <main class="main container header-404">
 		<h1>Whoops!</h1>
 		<p>404 page error</p>
 		<p>We can't find the page you're looking for.</p>
-		<a class="button" href="https://home.eco">Go home</a>
+		<a class="button" href="/">Go home</a>
 </main>
-
-<footer class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				&copy; {{ year }} Big Room Inc.<br/>
-				<span class="email-link" data-name="hello" data-domain="bigroom.eco"></span><br />
-				<a href="/privacy/">Privacy policy</a><br />
-			</div>
-			<div class="col">
-				<address>
-					332-237 Keefer Street<br />
-					Vancouver, BC, Canada<br />
-					V6A 1X6<br />
-				</address>
-			</div>
-			<div class="col">
-				<a href="https://home.eco"><img src="/img/doteco-logo-white.svg" class="logo-doteco" alt=".eco logo" /></a>
-			</div>
-			<div class="col">
-				<a href="https://climatesmartbusiness.com/"><img src="/img/climate-smart-logo.png" class="logo-climatesmart" alt="Climate Smart logo" /></a>
-			</div>
-			<div class="col">
-				<a href="https://www.bcorporation.net/community/big-room-inc"><img class="logo-bcorp" src="/img/bcorp.png" alt="B Corporation logo" /></a>
-			</div>
-		</div>
-	</div>
-</footer>
+{% endblock %}

@@ -101,6 +101,10 @@ a:hover {
 	text-decoration: none;
 }
 
+address {
+	font-style: normal;
+}
+
 .footer {
 	font-size: 0.9rem;
 	background-color: $bigroom-blue;
@@ -110,10 +114,6 @@ a:hover {
 
 	a {
 		color: white;
-	}
-
-	address {
-		font-style: normal;
 	}
 
 	.logo-doteco {
@@ -130,8 +130,8 @@ a:hover {
 
 	.col {
 		margin: auto;
-		margin-bottom: 0.5rem;
-		width: 30%;
+		margin-bottom: 1rem;
+		width: 50%;
 		line-height: 140%;
 	}
 }
@@ -155,7 +155,7 @@ a:hover {
 	.footer .col {
 		width: 16%;
 		padding: 2%;
-		float: left
+		float: left;
 	}
 }
 

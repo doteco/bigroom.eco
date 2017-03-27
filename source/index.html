@@ -6,16 +6,18 @@ og_image: og-bigroom.png
 changefreq: daily
 priority: 1
 ---
+{% extends './layouts/default.html' %}
+
+{% block banner %}
 <div class="banner">
 	<a href="https://home.eco/" class="container">
 		.eco Sunrise for trademark holders on now until April 2, 2017
 		<img src="/img/arrow-button.svg" class="arrow-icon" alt="arrow icon">
 	</a>
 </div>
+{% endblock %}
 
-<div class="hero">
-	<img class="hero-logo container" src="/img/BR_colour_inverse.png" alt="Big Room corporate logo" />
-</div>
+{% block content %}
 <main class="main container">
 	<h1>Big Room operates the .eco domain in partnership with the environmental community.</h1>
 
@@ -29,31 +31,4 @@ priority: 1
 	We also manage <a href="http://ecolabelindex.com">Ecolabel Index</a>, the largest global directory of ecolabels and environmental certifications.
 	</p>
 </main>
-
-<footer class="footer">
-  	<div class="container">
-  		<div class="row">
-  		<div class="col">
-			&copy; {{ year }} Big Room Inc.<br/>
-			<span class="email-link" data-name="hello" data-domain="bigroom.eco"></span><br />
-			<a href="/privacy/">Privacy policy</a><br />
-		</div>
-		<div class="col">
-			<address>
-			332-237 Keefer Street<br />
-			Vancouver, BC, Canada<br />
-			V6A 1X6<br />
-			</address>
-		</div>
-		<div class="col">
-			<a href="https://home.eco"><img src="/img/doteco-logo-white.svg" class="logo-doteco" alt=".eco logo" /></a>
-		</div>
-		<div class="col">
-			<a href="https://climatesmartbusiness.com/"><img src="/img/climate-smart-logo.png" class="logo-climatesmart" alt="Climate Smart logo" /></a>
-		</div>
-		<div class="col">
-			<a href="https://www.bcorporation.net/community/big-room-inc"><img class="logo-bcorp" src="/img/bcorp.png" alt="B Corporation logo" /></a>
-		</div>
-		</div>
-	</div>
-</footer>
+{% endblock %}

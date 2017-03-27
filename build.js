@@ -59,16 +59,17 @@ let ms = Metalsmith(__dirname)
   .use(markdown({
     html: true
   }))
+  .use(layouts({
+    engine: 'nunjucks',
+    default: 'default.html',
+    partials: 'layouts/partials',
+    pattern: '**/*.html'
+  }))
   .use(inplace({
     engine: 'nunjucks',
     engineOptions: {
       'cache': false
     },
-    pattern: '**/*.html'
-  }))
-  .use(layouts({
-    engine: 'nunjucks',
-    default: 'default.html',
     pattern: '**/*.html'
   }))
   .use(imagemin({
