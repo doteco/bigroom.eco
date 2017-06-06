@@ -18,19 +18,22 @@ const envOptions = {
   DEV: {
     'site_url': 'http://localhost:8081',
     'watch': true,
-    'disallow': '/'
+    'disallow': '/',
+    'trustmark': 'https://test-trust.profiles.eco'
   },
   TST: {
     'ga_tracking_id': 'UA-2825422-18',
     'site_url': 'https://test.bigroom.eco',
     'watch': false,
-    'disallow': '/'
+    'disallow': '/',
+    'trustmark': 'https://test-trust.profiles.eco'
   },
   PRD: {
     'ga_tracking_id': 'UA-2825422-17',
     'site_url': 'https://bigroom.eco',
     'watch': false,
-    'disallow': ['mobile/*', 'm/*']
+    'disallow': ['mobile/*', 'm/*'],
+    'trustmark': 'https://trust.profiles.eco'
   }
 }
 
@@ -44,7 +47,8 @@ let ms = Metalsmith(__dirname)
     'site_url': options['site_url'],
     'twitter_id': '@doteco',
     'ga_tracking_id': options['ga_tracking_id'],
-    'livereload': options.watch
+    'livereload': options.watch,
+    'trustmark': options.trustmark
   })
   .source('./source')
   .destination('./public/')
