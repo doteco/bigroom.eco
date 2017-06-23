@@ -8,7 +8,7 @@
     "imagemin-mozjpeg": "6.0.0",
     "imagemin-pngquant": "5.0.1",
     "metalsmith": "2.3.0",
-    "metalsmith-fingerprint-ignore": "1.1.2",
+    "metalsmith-fingerprint-ignore": "2.0.0",
     "metalsmith-imagemin": "4.0.0",
     "metalsmith-in-place": "1.4.4",
     "metalsmith-layouts": "1.8.1",
@@ -23,7 +23,7 @@
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
     "nunjucks": "3.0.1",
-    "stylelint": "7.10.1",
+    "stylelint": "7.11.1",
     "stylelint-config-standard": "16.0.0"
   },
   "scripts": {
