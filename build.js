@@ -18,14 +18,14 @@ const envOptions = {
   DEV: {
     'site_url': 'http://localhost:8081',
     'watch': true,
-    'disallow': '/',
+    'disallow': ['/'],
     'trustmark': 'https://test-trust.profiles.eco'
   },
   TST: {
     'ga_tracking_id': 'UA-2825422-18',
     'site_url': 'https://test.bigroom.eco',
     'watch': false,
-    'disallow': '/',
+    'disallow': ['/'],
     'trustmark': 'https://test-trust.profiles.eco'
   },
   PRD: {
@@ -104,15 +104,15 @@ if (options.watch) {
       404: '/404.html'
     }
   }))
-  .use(watch({
-    paths: {
-      '${source}/**/*': true,
-      'scss/**/*': '**/*.+(html|scss)',
-      '${source}/main.scss': '**/*.+(html|scss)',
-      'layouts/**/*': '**/*.html'
-    },
-    livereload: 35728
-  }))
+    .use(watch({
+      paths: {
+        '${source}/**/*': true,
+        'scss/**/*': '**/*.+(html|scss)',
+        '${source}/main.scss': '**/*.+(html|scss)',
+        'layouts/**/*': '**/*.html'
+      },
+      livereload: 35728
+    }))
 }
 
 ms.build(function (err, files) {
