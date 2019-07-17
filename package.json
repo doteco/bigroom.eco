@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
-    "html-validator": "4.0.3",
+    "html-validator": "4.0.4",
     "imagemin": "7.0.0",
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-pngquant": "8.0.0",
     "metalsmith": "2.3.0",
     "metalsmith-fingerprint-ignore": "2.0.0",
     "metalsmith-imagemin": "4.1.4",
-    "metalsmith-in-place": "1.4.4",
-    "metalsmith-layouts": "^1.8.1",
+    "metalsmith-in-place": "4.4.0",
+    "metalsmith-layouts": "2.3.1",
     "metalsmith-markdownit": "0.5.0",
     "metalsmith-permalinks": "2.2.0",
     "metalsmith-robots": "1.1.0",
@@ -23,7 +23,7 @@
     "node-sass": "4.12.0",
     "normalize.css": "8.0.1",
     "nunjucks": "3.2.0",
-    "stylelint": "10.0.1",
+    "stylelint": "10.1.0",
     "stylelint-config-standard": "18.3.0"
   },
   "scripts": {
@@ -46,6 +46,8 @@
   "homepage": "https://github.com/doteco/bigroom.eco#readme",
   "dependencies": {
     "bootstrap": "3.3.7",
-    "jquery": "3.4.1"
+    "jquery": "3.4.1",
+    "jstransformer-markdown": "1.2.1",
+    "jstransformer-nunjucks": "1.0.0"
   }
 }
