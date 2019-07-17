@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
-    "html-validator": "4.0.4",
+    "html-validator": "4.1.0",
     "imagemin": "7.0.0",
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-pngquant": "8.0.0",
+    "jstransformer-markdown": "1.2.1",
+    "jstransformer-nunjucks": "1.0.0",
     "metalsmith": "2.3.0",
     "metalsmith-fingerprint-ignore": "2.0.0",
     "metalsmith-imagemin": "4.1.4",
@@ -45,9 +47,6 @@
   },
   "homepage": "https://github.com/doteco/bigroom.eco#readme",
   "dependencies": {
-    "bootstrap": "3.3.7",
-    "jquery": "3.4.1",
-    "jstransformer-markdown": "1.2.1",
-    "jstransformer-nunjucks": "1.0.0"
+    "jquery": "3.4.1"
   }
 }
