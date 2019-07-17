@@ -64,17 +64,14 @@ let ms = Metalsmith(__dirname)
     html: true
   }))
   .use(layouts({
-    engine: 'nunjucks',
-    default: 'default.html',
-    partials: 'layouts/partials',
-    pattern: '**/*.html'
+    default: 'default.njk',
+    pattern: '**/*.njk'
   }))
   .use(inplace({
-    engine: 'nunjucks',
     engineOptions: {
       'cache': false
     },
-    pattern: '**/*.html'
+    pattern: '**/*.njk'
   }))
   .use(imagemin({
     mozjpeg: {
