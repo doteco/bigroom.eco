@@ -92,6 +92,10 @@ let ms = Metalsmith(__dirname)
     sitemap: options['site_url'] + '/sitemap.xml'
   }))
 
+ms.build(function (err, files) {
+  if (err) { throw err }
+})
+
 if (options.watch) {
   ms.use(serve({
     port: 8081,
@@ -111,7 +115,3 @@ if (options.watch) {
       livereload: 35728
     }))
 }
-
-ms.build(function (err, files) {
-  if (err) { throw err }
-})
