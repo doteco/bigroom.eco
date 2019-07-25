@@ -1,0 +1,26 @@
+---
+title: 404 Not Found
+permalink: false
+description: Unable to find the page you're looking for
+page_path: /404.html
+og_image: og-bigroom.png
+private: true
+---
+
+{% extends './layouts/default.njk' %}
+
+{% block content %}
+<main class="main container">
+  <h1>Registry policies</h1>
+  <p>Policies for the .eco registry.</p>
+  <ul>
+    <li>.eco Registry Policies</li>
+    <li>Eligibility policy</li>
+    <li>DNSSEC Practices Statement</li>
+
+  </ul>
+
+  <a class="button" href="/">Go home</a>
+  <span class="button email-link" data-name="hello" data-domain="bigroom.eco">Contact Us</span>
+</main>
+{% endblock %}
