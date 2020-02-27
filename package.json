@@ -17,7 +17,7 @@
     "metalsmith-markdownit": "0.5.0",
     "metalsmith-permalinks": "2.2.0",
     "metalsmith-robots": "1.1.0",
-    "metalsmith-sass": "1.6.0",
+    "metalsmith-sass": "1.7.0",
     "metalsmith-serve": "0.0.7",
     "metalsmith-sitemap": "1.2.2",
     "metalsmith-watch": "1.0.3",
@@ -25,7 +25,7 @@
     "node-sass": "4.13.0",
     "normalize.css": "8.0.1",
     "nunjucks": "3.2.0",
-    "stylelint": "12.0.0",
+    "stylelint": "13.0.0",
     "stylelint-config-standard": "19.0.0"
   },
   "scripts": {
