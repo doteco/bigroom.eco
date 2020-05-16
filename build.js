@@ -54,7 +54,7 @@ const ms = Metalsmith(__dirname)
   .destination('./public/')
   .clean(false)
   .use(sass({
-    includePaths: ['./scss'],
+    includePaths: ['./scss', 'main.scss'],
     outputDir: 'css'
   }))
   .use(fingerprint({
@@ -108,9 +108,9 @@ if (options.watch) {
     .use(watch({
       paths: {
         /* eslint no-template-curly-in-string: 0 */
+        '${source}/main.scss': '**/*',
         '${source}/**/*': true,
-        'scss/**/*': '**/*.+(html|scss)',
-        '${source}/main.scss': '**/*.+(html|scss)',
+        'scss/**/*': '{main.scss,**/*.html}',
         'layouts/**/*': '**/*.html'
       },
       livereload: 35728
