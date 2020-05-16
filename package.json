@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
-    "html-validator": "5.0.0",
+    "html-validator": "5.1.12",
     "imagemin": "7.0.1",
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-pngquant": "8.0.0",
@@ -22,11 +22,11 @@
     "metalsmith-sitemap": "1.2.2",
     "metalsmith-watch": "1.0.3",
     "node-fs-extra": "0.8.2",
-    "node-sass": "4.13.0",
+    "node-sass": "4.14.1",
     "normalize.css": "8.0.1",
-    "nunjucks": "3.2.0",
-    "stylelint": "13.0.0",
-    "stylelint-config-standard": "19.0.0"
+    "nunjucks": "3.2.1",
+    "stylelint": "13.3.3",
+    "stylelint-config-standard": "20.0.0"
   },
   "scripts": {
     "build": "node ./build.js",
@@ -47,6 +47,6 @@
   },
   "homepage": "https://github.com/doteco/bigroom.eco#readme",
   "dependencies": {
-    "jquery": "3.4.1"
+    "jquery": "3.5.1"
   }
 }
