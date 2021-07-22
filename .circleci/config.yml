@@ -5,7 +5,7 @@ workflows:
  version: 2
  test:
    jobs:
-     - build
+     - build:
         context: TEST
         filters:
           branches:
