@@ -2,9 +2,9 @@ version: 2.1
 orbs:
   aws-s3: circleci/aws-s3@3.0.0
 jobs:
-  environment:
-    NODE_ENV: test
   build:
+    environment:
+      NODE_ENV: test
     docker:
     # Image tags available here: https://circleci.com/docs/2.0/docker-image-tags.json
     - image: circleci/node:14.17.3
