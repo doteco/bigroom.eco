@@ -5,6 +5,7 @@ jobs:
   build:
     environment:
       NODE_ENV: test
+      AWS_REGION: us-west-2
     docker:
     # Image tags available here: https://circleci.com/docs/2.0/docker-image-tags.json
     - image: circleci/node:14.17.3
@@ -18,8 +19,5 @@ jobs:
     # Deployment
     - aws-s3/sync:
       # arguments: --acl public-read --cache-control "max-age=86400"
-      aws-access-key-id: AWS_ACCESS_KEY_ID
-      aws-region: us-west-2
-      aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       from: public
       to: 's3://test.bigroom.eco/prefix'
