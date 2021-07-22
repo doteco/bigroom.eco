@@ -7,6 +7,7 @@ workflows:
    jobs:
      - build:
         context: TEST
+        bucket: 's3://test.bigroom.eco/'
         filters:
           branches:
             only: master
@@ -14,11 +15,15 @@ workflows:
    jobs:
      - build:
         context: PROD
+        bucket: 's3://bigroom.eco/'
         filters:
           branches:
             only: production
 jobs:
   build:
+   parameters:
+     bucket:
+       type: string
     docker:
     # Image tags available here: https://circleci.com/docs/2.0/docker-image-tags.json
     - image: $NODE_IMAGE
@@ -33,4 +38,4 @@ jobs:
     - aws-s3/sync:
         # arguments: --acl public-read --cache-control "max-age=86400"
         from: public
-        to: 's3://test.bigroom.eco/'
+        to: << parameters.bucket >>
