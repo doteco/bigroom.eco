@@ -1,14 +1,22 @@
 version: 2.1
 orbs:
   aws-s3: circleci/aws-s3@3.0.0
+
+ workflows:
+   version: 2
+   test:
+     jobs:
+       - build
+          context: TEST
+         filters:
+           branches:
+             only: master
+
 jobs:
   build:
-    environment:
-      NODE_ENV: TST
-      AWS_REGION: us-west-2
     docker:
     # Image tags available here: https://circleci.com/docs/2.0/docker-image-tags.json
-    - image: circleci/node:14.17.3
+    - image: $NODE_IMAGE
     steps:
     - checkout
 
