@@ -1,17 +1,15 @@
 version: 2.1
 orbs:
   aws-s3: circleci/aws-s3@3.0.0
-
- workflows:
-   version: 2
-   test:
-     jobs:
-       - build
-          context: TEST
-         filters:
-           branches:
-             only: master
-
+workflows:
+ version: 2
+ test:
+   jobs:
+     - build
+        context: TEST
+       filters:
+         branches:
+           only: master
 jobs:
   build:
     docker:
