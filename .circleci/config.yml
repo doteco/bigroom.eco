@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     environment:
-      NODE_ENV: test
+      NODE_ENV: TST
       AWS_REGION: us-west-2
     docker:
     # Image tags available here: https://circleci.com/docs/2.0/docker-image-tags.json
