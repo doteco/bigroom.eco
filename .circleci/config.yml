@@ -10,6 +10,13 @@ workflows:
         filters:
           branches:
             only: master
+ production:
+   jobs:
+     - build:
+        context: PROD
+        filters:
+          branches:
+            only: production
 jobs:
   build:
     docker:
