@@ -37,21 +37,27 @@ a:hover {
 	text-decoration: underline;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
 	.container {
-		width: 970px;
+		width: 750px;
 		margin: auto;
 	}
+}
+
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .banner {
 	background-color: $bigroom-blue;
 	color: white;
-	padding: 1rem 2rem;
+	padding-top: 7px;
+	padding-bottom: 4px;
 	box-shadow: 0px 4px 20px 0px $bigroom-grey;
 	z-index: 100;
 	position: relative;
-	letter-spacing: 0.8px;
+	border-bottom: 1px solid white;
 
 	a {
 		color: white;
@@ -86,7 +92,7 @@ a:hover {
 
  .main {
 	text-align: center;
-	padding: 3rem 2rem;
+	padding: 2rem 2rem;
 }
 
 .button {

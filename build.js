@@ -3,7 +3,6 @@ const imagemin = require('metalsmith-imagemin')
 const inplace = require('metalsmith-in-place')
 const fingerprint = require('metalsmith-fingerprint-ignore')
 const layouts = require('metalsmith-layouts')
-const markdown = require('metalsmith-markdownit')
 const sass = require('metalsmith-sass')
 const serve = require('metalsmith-serve')
 const sitemap = require('metalsmith-sitemap')
@@ -55,13 +54,13 @@ const ms = Metalsmith(__dirname)
   .clean(false)
   .use(sass({
     includePaths: ['./scss', 'main.scss'],
-    outputDir: 'css'
+    outputDir: 'css',
+    outputStyle: 'compressed',
+    sourceMap: true,
+    sourceMapContents: true
   }))
   .use(fingerprint({
     pattern: 'css/main.css'
-  }))
-  .use(markdown({
-    html: true
   }))
   .use(layouts({
     default: 'default.njk',
@@ -85,7 +84,8 @@ const ms = Metalsmith(__dirname)
   }))
   .use(sitemap({
     hostname: options.site_url,
-    omitIndex: true
+    omitIndex: true,
+    privateProperty: 'private'
   }))
   .use(robots({
     disallow: options.disallow,
