@@ -7,6 +7,9 @@
 	<meta name="description" content="{{description}}">
 	<meta name="keywords" content="domains,registry,top-level domain,TLD,ECO,.eco,environmental action,sustainability,ngo">
 	<meta name="author" content="BigRoom.eco">
+	{% if noindex %}
+	<meta name="robots" content="noindex">
+	{% endif %}
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="{{twitter_id}}">
@@ -67,7 +70,7 @@
 {% endblock %}
 
 <div class="hero">
-	<a href="/"><img class="hero-logo container" src="/img/BR_colour_inverse.png" alt="Big Room corporate logo" /></a>
+	<img class="hero-logo container" src="/img/BR_colour_inverse.png" alt="Big Room corporate logo" />
 </div>
 
 {% block content %}

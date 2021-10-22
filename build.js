@@ -18,21 +18,24 @@ const envOptions = {
     site_url: 'http://localhost:8081',
     watch: true,
     disallow: ['/'],
-    trustmark: 'https://test-trust.profiles.eco'
+    trustmark: 'https://test-trust.profiles.eco',
+    noindex: true
   },
   TST: {
     ga_tracking_id: 'UA-2825422-18',
     site_url: 'https://test.bigroom.eco',
     watch: false,
     disallow: ['/'],
-    trustmark: 'https://test-trust.profiles.eco'
+    trustmark: 'https://test-trust.profiles.eco',
+    noindex: true
   },
   PRD: {
     ga_tracking_id: 'UA-2825422-17',
     site_url: 'https://bigroom.eco',
     watch: false,
     disallow: ['mobile/*', 'm/*'],
-    trustmark: 'https://trust.profiles.eco'
+    trustmark: 'https://trust.profiles.eco',
+    noindex: false
   }
 }
 
@@ -47,6 +50,7 @@ const ms = Metalsmith(__dirname)
     twitter_id: '@doteco',
     ga_tracking_id: options.ga_tracking_id,
     livereload: options.watch,
+    noindex: options.noindex,
     trustmark: options.trustmark
   })
   .source('./source')
