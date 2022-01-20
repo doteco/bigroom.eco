@@ -25,14 +25,16 @@ jobs:
       bucket:
         type: string
     docker:
-    # Image tags available here: https://circleci.com/docs/2.0/docker-image-tags.json
-    - image: $NODE_IMAGE
+    # https://hub.docker.com/r/cimg/node
+    - image: cimg/node:16.13
     steps:
     - checkout
 
     # Build
+    - run: sudo apt update
     - run: sudo apt-get install nasm
     - run: npm install
+    - run: node ./imagemin.mjs
     - run: npm run build
 
     # Deployment

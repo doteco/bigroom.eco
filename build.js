@@ -1,5 +1,4 @@
 const Metalsmith = require('metalsmith')
-const imagemin = require('metalsmith-imagemin')
 const inplace = require('metalsmith-in-place')
 const fingerprint = require('metalsmith-fingerprint-ignore')
 const layouts = require('metalsmith-layouts')
@@ -75,13 +74,6 @@ const ms = Metalsmith(__dirname)
       cache: false
     },
     pattern: '**/*.njk'
-  }))
-  .use(imagemin({
-    mozjpeg: {
-      quality: 40
-    },
-    pngquant: { },
-    svgo: { }
   }))
   .use(permalinks({
     relative: false
