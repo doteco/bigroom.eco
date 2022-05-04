@@ -16,7 +16,6 @@ const envOptions = {
   DEV: {
     site_url: 'http://localhost:8081',
     watch: true,
-    disallow: ['/'],
     trustmark: 'https://test-trust.profiles.eco',
     noindex: true
   },
@@ -24,7 +23,6 @@ const envOptions = {
     ga_tracking_id: 'UA-2825422-18',
     site_url: 'https://test.bigroom.eco',
     watch: false,
-    disallow: ['/'],
     trustmark: 'https://test-trust.profiles.eco',
     noindex: true
   },
@@ -32,7 +30,6 @@ const envOptions = {
     ga_tracking_id: 'UA-2825422-17',
     site_url: 'https://bigroom.eco',
     watch: false,
-    disallow: ['mobile/*', 'm/*'],
     trustmark: 'https://trust.profiles.eco',
     noindex: false
   }
@@ -84,7 +81,6 @@ const ms = Metalsmith(__dirname)
     privateProperty: 'private'
   }))
   .use(robots({
-    disallow: options.disallow,
     sitemap: options.site_url + '/sitemap.xml'
   }))
 
