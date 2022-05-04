@@ -9,7 +9,7 @@
     "imagemin-pngquant": "9.0.2",
     "jstransformer-markdown": "1.2.1",
     "jstransformer-nunjucks": "1.0.0",
-    "metalsmith": "2.3.0",
+    "metalsmith": "2.4.2",
     "metalsmith-fingerprint-ignore": "2.0.0",
     "metalsmith-in-place": "4.4.2",
     "metalsmith-layouts": "2.3.1",
@@ -23,14 +23,15 @@
     "node-sass": "7.0.1",
     "normalize.css": "8.0.1",
     "nunjucks": "3.2.3",
-    "stylelint": "14.2.0",
-    "stylelint-config-standard": "24.0.0"
+    "stylelint": "14.8.2",
+    "stylelint-config-standard": "25.0.0",
+    "stylelint-config-standard-scss": "3.0.0"
   },
   "scripts": {
     "build": "node ./build.js",
     "minify": "node ./imagemin.mjs",
     "start": "npm run build",
-    "stylelint": "stylelint 'scss/*.scss' --syntax scss || true",
+    "stylelint": "stylelint 'scss/*.scss' || true",
     "test": "npm run build",
     "validate": "node ./html-validate.js"
   },

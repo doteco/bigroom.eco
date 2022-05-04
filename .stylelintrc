@@ -1,5 +1,5 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-standard-scss",
   "rules": {
     "color-hex-case": null,
     "declaration-no-important": true,
@@ -10,6 +10,9 @@
     "selector-attribute-quotes": "always",
     "selector-list-comma-newline-after": "always-multi-line",
     "selector-max-compound-selectors": 3,
-    "string-quotes": "single"
+    "string-quotes": "single",
+    "color-function-notation": "legacy",
+    "alpha-value-notation": "number",
+    "selector-class-pattern": null
   }
 }
