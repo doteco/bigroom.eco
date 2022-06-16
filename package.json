@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
-    "html-validator": "6.0.0",
+    "html-validator": "6.0.1",
     "imagemin": "github:doteco/imagemin",
     "imagemin-mozjpeg": "10.0.0",
     "imagemin-pngquant": "9.0.2",
     "jstransformer-markdown": "1.2.1",
-    "jstransformer-nunjucks": "1.0.0",
+    "jstransformer-nunjucks": "1.1.0",
     "metalsmith": "2.4.2",
     "metalsmith-fingerprint-ignore": "2.0.0",
     "metalsmith-in-place": "4.4.2",
@@ -23,9 +23,9 @@
     "node-sass": "7.0.1",
     "normalize.css": "8.0.1",
     "nunjucks": "3.2.3",
-    "stylelint": "14.8.2",
-    "stylelint-config-standard": "25.0.0",
-    "stylelint-config-standard-scss": "3.0.0"
+    "stylelint": "14.9.1",
+    "stylelint-config-standard": "26.0.0",
+    "stylelint-config-standard-scss": "4.0.0"
   },
   "scripts": {
     "build": "node ./build.js",
