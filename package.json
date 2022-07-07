@@ -29,6 +29,7 @@
   },
   "scripts": {
     "build": "node ./build.js",
+    "build:ci": "npm run minify && npm run build",
     "minify": "node ./imagemin.mjs",
     "start": "npm run build",
     "stylelint": "stylelint 'scss/*.scss' || true",

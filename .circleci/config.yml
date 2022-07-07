@@ -26,7 +26,7 @@ jobs:
         type: string
     docker:
     # https://hub.docker.com/r/cimg/node
-    - image: cimg/node:16.15
+    - image: cimg/node:16.16
     steps:
     - checkout
 
@@ -34,8 +34,7 @@ jobs:
     - run: sudo apt update
     - run: sudo apt-get install nasm
     - run: npm ci
-    - run: node ./imagemin.mjs
-    - run: npm run build
+    - run: npm run build:ci
 
     # Deployment
     - aws-s3/sync:
