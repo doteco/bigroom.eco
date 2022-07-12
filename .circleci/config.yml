@@ -26,13 +26,12 @@ jobs:
         type: string
     docker:
     # https://hub.docker.com/r/cimg/node
-    - image: cimg/node:16.15
+    - image: cimg/node:16.16
     steps:
     - checkout
 
     # Build
     - run: sudo apt update
-    - run: sudo apt-get install nasm
     - run: npm ci
     - run: npm run build:ci
 

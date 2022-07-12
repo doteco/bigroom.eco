@@ -28,7 +28,7 @@
   "scripts": {
     "build": "node ./build.js",
     "build:ci": "npm run minify && npm run build",
-    "minify": "node ./imagex.mjs",
+    "minify": "mkdir -p public/img && node ./imagex.mjs",
     "start": "npm run build",
     "stylelint": "stylelint 'scss/*.scss' || true",
     "test": "npm run build",
