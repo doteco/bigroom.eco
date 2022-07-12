@@ -1,13 +1,13 @@
 const Metalsmith = require('metalsmith')
-const inplace = require('metalsmith-in-place')
+const inplace = require('@metalsmith/in-place')
 const fingerprint = require('metalsmith-fingerprint-ignore')
-const layouts = require('metalsmith-layouts')
-const sass = require('metalsmith-sass')
+const layouts = require('@metalsmith/layouts')
+const sass = require('@metalsmith/sass')
 const serve = require('metalsmith-serve')
 const sitemap = require('metalsmith-sitemap')
 const robots = require('metalsmith-robots')
 const watch = require('metalsmith-watch')
-const permalinks = require('metalsmith-permalinks')
+const permalinks = require('@metalsmith/permalinks')
 
 const env = process.env.NODE_ENV || 'DEV'
 console.log('Building for environment:', env)
@@ -53,9 +53,10 @@ const ms = Metalsmith(__dirname)
   .destination('./public/')
   .clean(false)
   .use(sass({
-    includePaths: ['./scss', 'main.scss'],
-    outputDir: 'css',
-    outputStyle: 'compressed',
+    entries: {
+      './scss/main.scss': 'css/main.css'
+    },
+    style: 'compressed',
     sourceMap: true,
     sourceMapContents: true
   }))
@@ -78,7 +79,7 @@ const ms = Metalsmith(__dirname)
   .use(sitemap({
     hostname: options.site_url,
     omitIndex: true,
-    privateProperty: 'private'
+    privateProperty: 'exclude'
   }))
   .use(robots({
     sitemap: options.site_url + '/sitemap.xml'

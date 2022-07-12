@@ -1,4 +1,6 @@
 @import '../node_modules/normalize.css/normalize';
+@import '404';
+@import 'privacy';
 
 // Fonts
 $font-body: 'Roboto', sans-serif;
@@ -8,6 +10,7 @@ $font-header-weight: 400;
 
 // Colours
 $bigroom-blue: #6AD1E3;
+$bigroom-dark-blue: #55a7b6;
 $bigroom-grey: #53565A;
 
 body {
@@ -30,9 +33,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-	color: $bigroom-blue;
+	color: $bigroom-dark-blue;
 	text-decoration: none;
 }
+
 a:hover {
 	text-decoration: underline;
 }
@@ -79,7 +83,7 @@ a:hover {
 }
 
 .hero {
-	background-image: url('/img/forests.jpg');
+	background-image: url('/img/forests.webp');
 	background-size: cover;
 	padding: 3.5rem;
 }
@@ -87,7 +91,7 @@ a:hover {
 .hero-logo {
 	margin: auto;
 	display: block;
-	width: 200pt;
+	width: 270px;
 }
 
  .main {
@@ -162,12 +166,15 @@ address {
 }
 
 @media (min-width: 768px) {
+	.footer {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+	}
+
 	.footer .col {
 		width: 29%;
 		padding: 2%;
 		float: left;
 	}
 }
-
-@import '404';
-@import 'privacy';
