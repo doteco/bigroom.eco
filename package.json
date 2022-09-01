@@ -30,6 +30,7 @@
     "minify": "mkdir -p public/img && node ./imagex.mjs",
     "start": "npm run build",
     "stylelint": "stylelint 'scss/*.scss' || true",
+    "stylelint:fix": "stylelint 'scss/*.scss' --fix",
     "test": "npm run build",
     "validate": "node ./html-validate.js"
   },
