@@ -101,10 +101,9 @@ if (options.watch) {
     .use(watch({
       paths: {
         /* eslint no-template-curly-in-string: 0 */
-        '${source}/main.scss': '**/*',
         '${source}/**/*': true,
-        'scss/**/*': '{main.scss,**/*.html}',
-        'layouts/**/*': '**/*.html'
+        'scss/**/*': '{main.scss,**/*.njk}',
+        'layouts/**/*': '**/*.njk'
       },
       livereload: 35728
     }))
