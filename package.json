@@ -10,6 +10,7 @@
     "globby": "13.1.2",
     "html-validator": "6.0.1",
     "jstransformer-nunjucks": "1.1.0",
+    "klaw": "4.0.1",
     "metalsmith": "2.5.1",
     "metalsmith-fingerprint-ignore": "2.0.0",
     "metalsmith-robots": "1.1.0",
