@@ -4,13 +4,13 @@
   "description": "",
   "devDependencies": {
     "@metalsmith/in-place": "4.5.0",
-    "@metalsmith/layouts": "2.5.1",
-    "@metalsmith/permalinks": "2.4.0",
-    "@metalsmith/sass": "1.1.0",
+    "@metalsmith/layouts": "2.6.0",
+    "@metalsmith/permalinks": "2.4.1",
+    "@metalsmith/sass": "1.2.0",
     "globby": "13.1.2",
     "html-validator": "6.0.1",
     "jstransformer-nunjucks": "1.1.0",
-    "metalsmith": "2.5.0",
+    "metalsmith": "2.5.1",
     "metalsmith-fingerprint-ignore": "2.0.0",
     "metalsmith-robots": "1.1.0",
     "metalsmith-serve": "0.0.7",
@@ -19,10 +19,10 @@
     "node-fs-extra": "0.8.2",
     "normalize.css": "8.0.1",
     "nunjucks": "3.2.3",
-    "sharp": "0.30.7",
-    "stylelint": "14.11.0",
-    "stylelint-config-standard": "28.0.0",
-    "stylelint-config-standard-scss": "5.0.0"
+    "sharp": "0.31.2",
+    "stylelint": "14.15.0",
+    "stylelint-config-standard": "29.0.0",
+    "stylelint-config-standard-scss": "6.1.0"
   },
   "scripts": {
     "build": "node ./build.js",

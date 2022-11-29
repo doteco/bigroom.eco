@@ -56,14 +56,17 @@
 	</script>
 </head>
 <body>
-
-{% block banner %}
-{{ banner | safe }}
-{% endblock %}
-
-<div class="hero">
-	<img class="hero-logo container" src="/img/BR_colour_inverse.webp" alt="Big Room corporate logo" width="270px" height="95px" />
+<div class="banner">
+  <div class="container">
+    <a class="navbar-brand" href="https://bigroom.eco/">
+      <img alt=".eco logo" src="/img/doteco-logo-white.svg" width="40" height="36">
+    </a>
+  </div>
 </div>
+
+<header class="hero">
+	<img class="hero-logo container" src="/img/BR_colour_inverse.webp" alt="Big Room corporate logo" width="270px" height="95px" />
+</header>
 
 {% block content %}
 {{ contents | safe }}
@@ -92,6 +95,7 @@
 		</div>
 	</div>
 </footer>
+
 <script>
 	// email obfuscation
 	document.querySelectorAll(".email-link").forEach(function (el) {
