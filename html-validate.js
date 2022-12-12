@@ -4,7 +4,7 @@ const path = require('path')
 const validator = require('html-validator')
 
 const skipFiles = [
-// 'public/registrar/index.html'
+'public/policies/index.html'
 ]
 
 const skip = [

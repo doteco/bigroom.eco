@@ -8,6 +8,7 @@ const sitemap = require('metalsmith-sitemap')
 const robots = require('metalsmith-robots')
 const watch = require('metalsmith-watch')
 const permalinks = require('@metalsmith/permalinks')
+const redirect = require('metalsmith-redirect')
 
 const env = process.env.NODE_ENV || 'DEV'
 console.log('Building for environment:', env)
@@ -83,6 +84,12 @@ const ms = Metalsmith(__dirname)
   }))
   .use(robots({
     sitemap: options.site_url + '/sitemap.xml'
+  }))
+  .use(redirect({
+    frontmatter: true,
+    redirections: {
+      '/policies/': 'https://go.eco/policies/'
+    }
   }))
 
 ms.build(function (err, files) {
