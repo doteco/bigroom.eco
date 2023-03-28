@@ -87,6 +87,7 @@ const ms = Metalsmith(__dirname)
   }))
   .use(redirect({
     frontmatter: true,
+    noindex: false,
     redirections: {
       '/policies/': 'https://go.eco/policies/'
     }
