@@ -47,7 +47,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
 	.container {
 		width: 600px;
 		margin: auto;
@@ -159,7 +159,7 @@ address {
 	clear: both;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
 	body {
 		box-sizing: border-box;
 		min-height: 100%;

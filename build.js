@@ -1,9 +1,9 @@
+const browserSync = require('browser-sync')
 const Metalsmith = require('metalsmith')
 const inplace = require('@metalsmith/in-place')
 const fingerprint = require('metalsmith-fingerprint-ignore')
 const layouts = require('@metalsmith/layouts')
 const sass = require('@metalsmith/sass')
-const serve = require('metalsmith-serve')
 const sitemap = require('metalsmith-sitemap')
 const robots = require('metalsmith-robots')
 const watch = require('metalsmith-watch')
@@ -98,21 +98,19 @@ ms.build(function (err, files) {
 })
 
 if (options.watch) {
-  ms.use(serve({
-    port: 8081,
-    document_root: 'public',
-    verbose: true,
-    http_error_files: {
-      404: '/404.html'
-    }
+  ms.use(watch({
+    paths: {
+      /* eslint no-template-curly-in-string: 0 */
+      '${source}/**/*': true,
+      'scss/**/*': '{main.scss,**/*.njk}',
+      'layouts/**/*': '**/*.njk'
+    },
+    livereload: 35728
   }))
-    .use(watch({
-      paths: {
-        /* eslint no-template-curly-in-string: 0 */
-        '${source}/**/*': true,
-        'scss/**/*': '{main.scss,**/*.njk}',
-        'layouts/**/*': '**/*.njk'
-      },
-      livereload: 35728
-    }))
+
+  browserSync.init({
+    port: 8081,
+    server: 'public',
+    watch: true
+  })
 }
