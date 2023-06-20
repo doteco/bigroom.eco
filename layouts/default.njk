@@ -109,8 +109,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', '{{ga_tracking_id}}', { 'transport_type': 'beacon'});
+	gtag('config', '{{ga-tracking-id}}', { 'transport_type': 'beacon', 'anonymize_ip': true });
 </script>
 {% endif %}
 {% if livereload %}
