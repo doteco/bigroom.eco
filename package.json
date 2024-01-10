@@ -27,6 +27,7 @@
   },
   "scripts": {
     "build": "node ./build.js",
+    "push-pca": "git checkout production && git merge master && git sync && git checkout master",
     "minify": "mkdir -p public/img && node ./imagex.mjs",
     "start": "npm run build",
     "stylelint": "stylelint 'scss/*.scss' || true",
