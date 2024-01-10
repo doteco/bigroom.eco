@@ -9,7 +9,6 @@
     "@metalsmith/sass": "1.8.1",
     "browser-sync": "3.0.2",
     "globby": "14.0.0",
-    "html-validator": "6.0.1",
     "jstransformer-nunjucks": "1.2.0",
     "klaw": "4.1.0",
     "metalsmith": "2.6.2",
