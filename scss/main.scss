@@ -10,7 +10,7 @@ $font-header-weight: 400;
 
 // Colours
 $bigroom-blue: #6AD1E3;
-$bigroom-dark-blue: #55a7b6;
+$bigroom-dark-blue: #3C7E8B;
 $bigroom-grey: #53565A;
 
 html, body {
@@ -35,7 +35,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-header;
 	font-weight: $font-header-weight;
-	color: $bigroom-blue;
+	color: $bigroom-dark-blue;
 }
 
 a {
@@ -64,7 +64,7 @@ a.button {
 
 .footer {
 	font-size: 0.75rem;
-	background-color: $bigroom-blue;
+	background-color: $bigroom-dark-blue;
 	color: white;
 	padding: 1.1rem 0;
 
@@ -80,7 +80,7 @@ a.button {
 }
 
 .banner {
-	background-color: $bigroom-blue;
+	background-color: $bigroom-dark-blue;
 	color: white;
 	padding-top: 7px;
 	padding-bottom: 4px;
@@ -125,17 +125,17 @@ a.button {
 }
 
 .button {
-	border: 2px solid $bigroom-blue;
+	border: 2px solid $bigroom-dark-blue;
 	border-radius: 40px;
 	padding: 0.8rem 1.5rem;
 	display: inline-block;
-	color: $bigroom-blue;
+	color: $bigroom-dark-blue;
 	font-weight: $font-header-weight;
 	margin: 1rem;
 }
 
 .button:hover, .button:hover a {
-	background-color: $bigroom-blue;
+	background-color: $bigroom-dark-blue;
 	color: white;
 	text-decoration: none;
 }
