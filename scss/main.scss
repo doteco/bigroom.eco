@@ -40,11 +40,14 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	color: $bigroom-dark-blue;
+}
+
+a.button {
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
+.p-button {
+	text-align: center;
 }
 
 @media (width >= 768px) {
@@ -60,22 +63,20 @@ a:hover {
 }
 
 .footer {
-	font-size: 0.9rem;
+	font-size: 0.75rem;
 	background-color: $bigroom-blue;
 	color: white;
-	text-align: center;
-	padding: 1rem 0;
+	padding: 1.1rem 0;
 
 	a {
 		color: white;
 	}
 
 	.col {
-		margin: auto;
-		margin-bottom: 1rem;
-		width: 50%;
-		line-height: 140%;
-	}
+		width: 30%;
+		padding: 1%;
+		float: left;
+	}	
 }
 
 .banner {
@@ -120,7 +121,6 @@ a:hover {
 }
 
 .main {
-	text-align: center;
 	padding: 2rem;
 }
 
@@ -159,6 +159,15 @@ address {
 	clear: both;
 }
 
+.logo-bcorp {
+	height: 72px;
+}
+
+.footer-logo {
+	display: block;
+	margin: auto;
+}
+
 @media (width >= 768px) {
 	body {
 		box-sizing: border-box;
@@ -172,13 +181,11 @@ address {
 		flex-shrink: 0;
 	}
 
-	main {
-		flex-grow: 1;
+	.footer {
+		font-size: 1rem;
 	}
 
-	.footer .col {
-		width: 46%;
-		padding: 2%;
-		float: left;
+	main {
+		flex-grow: 1;
 	}
 }
