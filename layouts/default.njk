@@ -56,16 +56,17 @@
 <script src="https://cdn.usefathom.com/script.js" data-site="JLIDFFNU" defer></script>
 </head>
 <body>
-<div class="banner">
-  <div class="container">
-    <a class="navbar-brand" href="https://bigroom.eco/">
-      <img alt=".eco logo" src="/img/doteco-logo-white.svg" width="40" height="36">
-    </a>
-  </div>
-</div>
-
-<header class="hero">
-	<img class="hero-logo container" src="/img/BR_colour_inverse.webp" alt="Big Room corporate logo" width="270" height="95">
+<header>
+	<div class="banner">
+		<div class="container">
+			<a class="navbar-brand" href="https://bigroom.eco/">
+				<img alt=".eco logo" src="/img/doteco-logo-white.svg" width="40" height="36">
+			</a>
+		</div>
+	</div>
+	<div class="hero">
+		<img class="hero-logo container" src="/img/BR_colour_inverse.webp" alt="Big Room corporate logo" width="270" height="95">
+	</div>
 </header>
 
 {% block content %}
@@ -81,13 +82,13 @@
 				<a href="https://go.eco/contact/">Contact us</a>
 			</div>
 			<div class="col">
-				<a href="https://www.bcorporation.net/find-a-b-corp/company/big-room-inc/">
-					<img class="logo-bcorp footer-logo" src="/img/bcorp.png" alt="B Corporation logo">
+				<a href="https://profiles.eco/bigroom">
+					<img class="eco-trustmark footer-logo" alt=".eco profile for bigroom.eco" src="{{trustmark}}/bigroom/eco-button.svg?color=%23FFF" width="50" height="50">
 				</a>
 			</div>
 			<div class="col">
-				<a href="https://profiles.eco/bigroom">
-					<img class="eco-trustmark footer-logo" alt=".eco profile for bigroom.eco" src="{{trustmark}}/bigroom/eco-button.svg?color=%23FFF" width="50" height="50">
+				<a href="https://www.bcorporation.net/find-a-b-corp/company/big-room-inc/">
+					<img class="logo-bcorp footer-logo" src="/img/bcorp.png" alt="B Corporation logo">
 				</a>
 			</div>
 		</div>
