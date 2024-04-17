@@ -90,22 +90,22 @@ a.button {
 
 	a {
 		color: white;
-		text-decoration: none;
 	}
+}
 
-	a:hover {
-		text-decoration: underline;
-	}
+.banner-content {
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
+}
 
-	.arrow-icon {
-		width: 2rem;
-		padding-left: 2em;
-		margin-bottom: -0.5em;
-	}
+.navbar-brand img {
+	height: 36px;
+}
 
-	.navbar-brand img {
-		height: 36px;
-	}
+.navbar-content {
+	flex-grow: 1;
+	text-align: center;
 }
 
 .hero {
@@ -159,13 +159,13 @@ address {
 	clear: both;
 }
 
-.logo-bcorp {
-	margin-top: -10px !important;
-}
-
 .footer-logo {
 	display: block;
 	margin: auto;
+}
+
+.footer-logo.logo-bcorp {
+	margin-top: -10px;
 }
 
 @media (width >= 768px) {
