@@ -1,6 +1,6 @@
-@import '../node_modules/normalize.css/normalize';
-@import '404';
-@import 'privacy';
+@use '../node_modules/normalize.css/normalize';
+@use '404' as missing;
+@use 'privacy';
 
 // Fonts
 $font-body: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
