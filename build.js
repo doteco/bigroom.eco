@@ -61,14 +61,16 @@ const ms = Metalsmith(__dirname)
   .use(fingerprint({
     pattern: 'css/main.css'
   }))
-  .use(layouts({
-    default: 'default.njk',
-    pattern: '**/*.njk'
-  }))
   .use(inplace({
+    transform: 'nunjucks',
     engineOptions: {
       cache: false
     },
+    pattern: '**/*.njk'
+  }))
+  .use(layouts({
+    transform: 'nunjucks',
+    default: 'default.njk',
     pattern: '**/*.njk'
   }))
   .use(permalinks({
