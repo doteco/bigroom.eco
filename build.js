@@ -88,7 +88,8 @@ const ms = Metalsmith(__dirname)
     frontmatter: true,
     noindex: false,
     redirections: {
-      '/policies/': 'https://go.eco/policies/'
+      '/policies/': 'https://go.eco/policies/',
+      '/about': 'https://go.eco/about/'
     }
   }))
 
