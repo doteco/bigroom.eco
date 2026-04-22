@@ -6,7 +6,8 @@ disclosures = [
 	{ doc_type="sustainability-page", url="https://go.eco/impact/", domain="bigroom.eco", title=".eco Sustainability Policy" },
 	{ doc_type="certificate", url="https://go.eco/news/eco-is-carbon-neutral-2025/", domain="bigroom.eco", valid_until="2026-12-31", title=".eco is certified carbon neutral - 2025" },
 	{ doc_type="annual-report", url="https://go.eco/impact/impact-report-2025/", domain="bigroom.eco", valid_until="2026-12-31", title="2025 Impact Report" },
-	{ doc_type="annual-report", url="https://go.eco/impact/ghg-report-2025/", domain="bigroom.eco", valid_until="2026-12-31", title="Greenhouse Gas Emissions Report FY2025" }
+	{ doc_type="annual-report", url="https://go.eco/impact/ghg-report-2025/", domain="bigroom.eco", valid_until="2026-12-31", title="Greenhouse Gas Emissions Report FY2025" },
+	{ doc_type="sustainability-page", url="https://go.eco/policies/supplier/", domain="bigroom.eco", title=".eco Supplier Policy" }
 ]
 
 [upstream]
