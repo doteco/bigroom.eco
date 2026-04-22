@@ -4,7 +4,9 @@ description: Privacy policy for bigroom.eco web site
 page_path: privacy/
 og_image: og-bigroom.webp
 ---
+{% extends './layouts/default.njk' %}
 
+{% block content %}
 <main class="main container policy-content">
 		<h1>Big Room Inc. Privacy Policy</h1>
 		<i>Updated: October 23, 2023</i>
@@ -72,3 +74,4 @@ og_image: og-bigroom.webp
 		<h2>Contact Us</h2>
 		<p>If you have any questions, comments, or suggestions about this Privacy Policy or Big Room’s privacy practices that were not answered here, send our Privacy Officer an e-mail at <span class="email-link" data-name="privacy" data-domain="bigroom.eco"></span>.</p>
 </main>
+{% endblock %}

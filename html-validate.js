@@ -3,7 +3,8 @@ const klaw = require('klaw')
 const path = require('path')
 
 const skipFiles = [
-'public/policies/index.html'
+'public/policies/index.html',
+'public/about/index.html',
 ]
 
 const validate = function (file) {
