@@ -18,12 +18,12 @@ html, body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	font-size: 18px;
 }
 
 body {
 	font-family: $font-body;
 	font-weight: $font-body-weight;
-	font-size: 1rem;
 	background-color: white;
 	color: $bigroom-grey;
 
@@ -55,6 +55,10 @@ a.button {
 		width: 600px;
 		margin: auto;
 	}
+
+	.col {
+		width: 30%;
+	}
 }
 
 .container {
@@ -63,7 +67,7 @@ a.button {
 }
 
 .footer {
-	font-size: 0.75rem;
+	font-size: 90%;
 	background-color: $bigroom-dark-blue;
 	color: white;
 	padding: 1.1rem 0;
@@ -72,11 +76,15 @@ a.button {
 		color: white;
 	}
 
-	.col {
-		width: 30%;
-		padding: 1%;
-		float: left;
-	}	
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		margin: 0.3rem 0;
+	}
 }
 
 .banner {
@@ -145,18 +153,8 @@ address {
 }
 
 .row {
-	clear: both;
-	zoom: 1; /* For IE 6/7 */
-}
-
-.row::before,
-.row::after {
-	content: '';
-	display: table;
-}
-
-.row::after {
-	clear: both;
+	display: flex;
+	justify-content: space-between;
 }
 
 .footer-logo {
@@ -179,10 +177,6 @@ address {
 	footer, header {
 		flex-grow: 0;
 		flex-shrink: 0;
-	}
-
-	.footer {
-		font-size: 1rem;
 	}
 
 	main {
